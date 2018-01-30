@@ -10,7 +10,7 @@ export class RecipeService{
   private recipes: Recipe[] = [
     new Recipe('Tasty Schnitzel',
                'A super-tasty Schnitzel - just awesome!',
-               'https://cdn.pixabay.com/photo/2014/05/28/12/20/wiener-schnitzel-356436_960_720.jpg',
+               'https://www.daringgourmet.com/wp-content/uploads/2014/03/Schnitzel-7_edited.jpg',
                 [
                   new Ingredient('Meat', 1),
                   new Ingredient('French Fries', 20)
@@ -31,6 +31,10 @@ export class RecipeService{
 
   getRecipes(){
     return this.recipes.slice();
+  }
+
+  getRecipe(index: number){
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]){
